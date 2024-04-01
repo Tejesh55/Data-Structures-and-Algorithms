@@ -4,7 +4,7 @@ public class test{
 		while(i<x.length) {
 			int a=0;
 			int b=x.length-1-i;
-			for(int j=1;j<b;j++) {
+			for(int j=1;j<=b;j++) {
 				if(x[a]<=x[j]) {
 					a=j;
 				}
@@ -17,7 +17,7 @@ public class test{
 		return x;
 	}
 	public static void main(String args[]) {
-		int[] x = {9,3,6,1,7,3,2};
+		int[] x = {9,3,6,1,7,3,2,10};
 		int [] result = selectionsort(x);
 		System.out.println("The sorted array using selection sort is "+Arrays.toString(result));		
 	}
