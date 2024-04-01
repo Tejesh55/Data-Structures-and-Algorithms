@@ -1,23 +1,21 @@
+import java.util.*;
 public class test{
 	public static int[] selectionsort(int[] x) {
-		int i=0;
-		while(i<x.length) {
+		for(int i=x.length-1;i>0;i--) {
 			int a=0;
-			int b=x.length-1-i;
-			for(int j=1;j<=b;j++) {
+			for(int j=1;j<=i;j++) {
 				if(x[a]<=x[j]) {
 					a=j;
 				}
 			}
 			int temp = x[a];
-			x[a]=x[b];
-			x[b]=temp;
-			i++;
+			x[a]=x[i];
+			x[i]=temp;
 		}
 		return x;
 	}
 	public static void main(String args[]) {
-		int[] x = {9,3,6,1,7,3,2,10};
+		int[] x = {9,3,6,1,11,3,2,10};
 		int [] result = selectionsort(x);
 		System.out.println("The sorted array using selection sort is "+Arrays.toString(result));		
 	}
